@@ -71,13 +71,13 @@ extern CFE_PSP_MemoryBlock_t PcRtems_ReservedMemBlock;
 **    Provides a common interface to the processor reset.
 **
 **  Arguments:
-**    reset_type  : Type of reset.
+**    resetType  : Type of reset.
 **
 **  Return:
 **    (none)
 */
 
-void CFE_PSP_Restart(uint32 reset_type)
+void CFE_PSP_Restart(uint32 resetType)
 {
     CFE_PSP_FlushCaches(1, PcRtems_ReservedMemBlock.BlockPtr, PcRtems_ReservedMemBlock.BlockSize);
     OS_printf("CFE_PSP_Restart is not implemented on this platform ( yet ! )\n");

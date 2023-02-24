@@ -48,15 +48,15 @@
 /*
 **
 ** Purpose:
-**	Copies 'size' byte from memory address pointed by 'src' to memory
-**  address pointed by ' dst' For now we are using the standard c library
+**	Copies 'n' byte from memory address pointed by 'src' to memory
+**  address pointed by ' dest' For now we are using the standard c library
 **  call 'memcpy' but if we find we need to make it more efficient then
 **  we'll implement it in assembly.
 **
 ** Assumptions and Notes:
 **
 ** Parameters:
-**	dst : pointer to an address to copy to
+**	dest : pointer to an address to copy to
 **  src : pointer address to copy from
 **
 ** Global Inputs: None
@@ -66,17 +66,17 @@
 **
 ** Return Values: CFE_PSP_SUCCESS
 */
-int32 CFE_PSP_MemCpy(void *dst, const void *src, uint32 size)
+int32 CFE_PSP_MemCpy(void *dest, const void *src, uint32 n)
 {
-    memcpy(dst, src, size);
+    memcpy(dst, src, n);
     return CFE_PSP_SUCCESS;
 }
 
 /*
 **
 ** Purpose:
-**	Copies 'size' number of byte of value 'value' to memory address pointed
-**  by 'dst' .For now we are using the standard c library call 'memset'
+**	Copies 'n' number of byte of value 'value' to memory address pointed
+**  by 'dest' .For now we are using the standard c library call 'memset'
 **  but if we find we need to make it more efficient then we'll implement
 **  it in assembly.
 **
@@ -95,8 +95,8 @@ int32 CFE_PSP_MemCpy(void *dst, const void *src, uint32 size)
 /*
 ** CFE_PSP_MemSet
 */
-int32 CFE_PSP_MemSet(void *dst, uint8 value, uint32 size)
+int32 CFE_PSP_MemSet(void *dest, uint8 value, uint32 n)
 {
-    memset(dst, (int)value, (size_t)size);
+    memset(dest, (int)value, (size_t)n);
     return CFE_PSP_SUCCESS;
 }
