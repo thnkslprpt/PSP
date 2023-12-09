@@ -23,8 +23,6 @@
 #include "uttest.h"
 #include "utstubs.h"
 
-#include "coveragetest-psp-shared.h"
-
 #define ADD_TEST(test) UtTest_Add((Test_##test), Psp_Test_Setup, Psp_Test_Teardown, #test)
 
 void Psp_Test_Setup(void);
