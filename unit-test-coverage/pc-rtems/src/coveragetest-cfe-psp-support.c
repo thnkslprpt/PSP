@@ -59,5 +59,6 @@ void Test_CFE_PSP_GetSpacecraftId(void)
 
 void Test_CFE_PSP_GetProcessorName(void)
 {
-    UtAssert_StrCmp(CFE_PSP_GetProcessorName(), PCS_CONFIG_CPUNAME, "CFE_PSP_GetProcessorName returns the correct string.");
+    UtAssert_STRINGBUF_EQ(CFE_PSP_GetProcessorName(), UTASSERT_STRINGBUF_NULL_TERM, PCS_CONFIG_CPUNAME,
+                          UTASSERT_STRINGBUF_NULL_TERM);
 }
