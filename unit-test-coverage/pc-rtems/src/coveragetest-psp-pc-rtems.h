@@ -33,6 +33,10 @@ void Test_CFE_PSP_AttachExceptions(void);
 void Test_CFE_PSP_ExceptionGetSummary_Impl(void);
 void Test_CFE_PSP_SetDefaultExceptionEnvironment(void);
 
+/* Coverage test cases for cfs_psp_start.c */
+void Test_CFE_PSP_Setup(void);
+void Test_OS_Application_Startup(void);
+void Test_CFE_PSP_Main(void);
 /* Coverage test cases for cfs_psp_memory.c */
 void Test_CFE_PSP_GetCDSSize(void);
 void Test_CFE_PSP_WriteToCDS(void);
@@ -48,10 +52,7 @@ void Test_CFE_PSP_GetCFETextSegmentInfo(void);
 /* Coverage test cases for cfs_psp_ssr.c */
 void Test_CFE_PSP_InitSSR(void);
 
-/* Coverage test cases for cfs_psp_start.c */
-void Test_CFE_PSP_Setup(void);
-void Test_OS_Application_Startup(void);
-void Test_CFE_PSP_Main(void);
+
 
 /* Coverage test cases for cfs_psp_support.c */
 void Test_CFE_PSP_Restart(void);
