@@ -31,7 +31,6 @@ void Test_CFE_PSP_Restart(void)
 
     CFE_PSP_Restart(CFE_PSP_RST_TYPE_POWERON);
     UtAssert_STUB_COUNT(PCS_exit, 1);
-    UT_ResetState(UT_KEY(PCS_exit)); /* Reset so cleared for future tests */
 }
 
 void Test_CFE_PSP_Panic(void)
