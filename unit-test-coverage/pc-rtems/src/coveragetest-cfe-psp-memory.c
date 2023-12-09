@@ -109,7 +109,6 @@ void Test_CFE_PSP_SetupReservedMemoryMap(void)
     UT_SetDataBuffer(UT_KEY(PCS_malloc), UT_MemoryMapBuffer, sizeof(UT_MemoryMapBuffer), false);
     CFE_PSP_SetupReservedMemoryMap();
     UtAssert_STUB_COUNT(OS_printf, 3); /* 3 calls to OS_printf along nominal path in CFE_PSP_SetupReservedMemoryMap */
-    UT_ResetState(UT_KEY(PCS_malloc)); /* Reset so cleared for future tests that invoke malloc */
 }
 
 void Test_CFE_PSP_InitProcessorReservedMemory(void)
