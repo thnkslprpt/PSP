@@ -36,7 +36,6 @@ void Test_CFE_PSP_AttachExceptions(void)
     /* Nominal path */
     CFE_PSP_AttachExceptions();
     UtAssert_STUB_COUNT(OS_printf, 1);
-    UT_ResetState(UT_KEY(PCS_malloc)); /* Reset so cleared for next test */
 }
 
 void Test_CFE_PSP_ExceptionGetSummary_Impl(void)

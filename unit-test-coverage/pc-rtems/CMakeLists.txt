@@ -30,6 +30,7 @@ add_executable(coverage-${CFE_PSP_TARGETNAME}-testrunner
     src/coveragetest-cfe-psp-support.c
     src/coveragetest-cfe-psp-watchdog.c
     src/coveragetest-psp-pc-rtems.c
+    $<TARGET_OBJECTS:psp-${CFE_PSP_TARGETNAME}-shared>
     $<TARGET_OBJECTS:psp-${CFE_PSP_TARGETNAME}-impl>
 )
 
