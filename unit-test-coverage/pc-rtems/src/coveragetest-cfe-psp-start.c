@@ -53,8 +53,6 @@ void Test_OS_Application_Startup(void)
     UT_OS_Application_Startup();
     UtAssert_STUB_COUNT(OS_API_Init, 1); /* Test for successful initialization (called by CFE_PSP_Main) */
 
-    UT_ResetState(UT_KEY(PCS_malloc)); /* Reset so cleared for future tests that invoke malloc */
-
     /* Cannot test for failure of CFE_PSP_Setup (it always returns RTEMS_SUCCESSFUL in the current implementation - so
      * this branch is unreachable) */
 }
@@ -84,6 +82,4 @@ void Test_CFE_PSP_Main(void)
      * failure of OS_FileSysAddFixedMap, and 1 from CFE_PSP_InitProcessorReservedMemory */
     UtAssert_STUB_COUNT(OS_printf, 5);
     UT_ResetState(UT_KEY(OS_printf)); /* Reset so cleared for future tests */
-
-    UT_ResetState(UT_KEY(PCS_malloc)); /* Reset so cleared for future tests that invoke malloc */
 }
