@@ -32,10 +32,6 @@ void UtTest_Setup(void)
     ADD_TEST(CFE_PSP_ExceptionGetSummary_Impl);
     ADD_TEST(CFE_PSP_SetDefaultExceptionEnvironment);
 
-    /* Coverage test cases for cfs_psp_start.c */
-    ADD_TEST(CFE_PSP_Setup);
-    ADD_TEST(OS_Application_Startup);
-    ADD_TEST(CFE_PSP_Main);
     /* Coverage test cases for cfs_psp_memory.c */
     ADD_TEST(CFE_PSP_GetCDSSize);
     ADD_TEST(CFE_PSP_WriteToCDS);
@@ -51,7 +47,10 @@ void UtTest_Setup(void)
     /* Coverage test cases for cfs_psp_ssr.c */
     ADD_TEST(CFE_PSP_InitSSR);
 
-
+    /* Coverage test cases for cfs_psp_start.c */
+    ADD_TEST(CFE_PSP_Setup);
+    ADD_TEST(OS_Application_Startup);
+    ADD_TEST(CFE_PSP_Main);
 
     /* Coverage test cases for cfs_psp_support.c */
     ADD_TEST(CFE_PSP_Restart);
