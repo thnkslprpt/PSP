@@ -51,6 +51,7 @@
 #include "cfe_psp_cds_api.h"
 #include "cfe_psp_eepromaccess_api.h"
 #include "cfe_psp_error.h"
+#include "cfe_psp_eventport_api.h"
 #include "cfe_psp_exception_api.h"
 #include "cfe_psp_id_api.h"
 #include "cfe_psp_memaccess_api.h"

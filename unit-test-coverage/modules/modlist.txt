@@ -10,3 +10,5 @@ eeprom_mmap_file
 port_direct
 linux_sysmon
 soft_timebase
+eventport_printf
+eventport_syslog
