@@ -76,7 +76,7 @@ int32 CFE_PSP_SendEventToPort(uint8 PortNum, const char *Message)
     /* Validate port number */
     if (PortNum >= CFE_PSP_EVS_MAX_PORTS)
     {
-        return CFE_PSP_INVALID_ARGUMENT;
+        return CFE_PSP_ERROR;
     }
 
     /* Validate message pointer */
@@ -108,7 +108,7 @@ int32 CFE_PSP_GetEventPortConfig(uint8 PortNum, char *PortConfig, size_t ConfigS
     /* Validate port number */
     if (PortNum >= CFE_PSP_EVS_MAX_PORTS)
     {
-        return CFE_PSP_INVALID_ARGUMENT;
+        return CFE_PSP_ERROR;
     }
 
     /* Validate buffer pointer */

@@ -63,7 +63,7 @@
  *
  * @return Execution status
  * @retval CFE_PSP_SUCCESS on success
- * @retval CFE_PSP_INVALID_ARGUMENT if PortNum is invalid (>= CFE_PSP_EVS_MAX_PORTS)
+ * @retval CFE_PSP_ERROR if PortNum is invalid (>= CFE_PSP_EVS_MAX_PORTS)
  * @retval CFE_PSP_INVALID_POINTER if Message is NULL
  */
 int32 CFE_PSP_SendEventToPort(uint8 PortNum, const char *Message);
@@ -82,7 +82,7 @@ int32 CFE_PSP_SendEventToPort(uint8 PortNum, const char *Message);
  *
  * @return Execution status
  * @retval CFE_PSP_SUCCESS on success
- * @retval CFE_PSP_INVALID_ARGUMENT if PortNum is invalid (>= CFE_PSP_EVS_MAX_PORTS)
+ * @retval CFE_PSP_ERROR if PortNum is invalid (>= CFE_PSP_EVS_MAX_PORTS)
  * @retval CFE_PSP_INVALID_POINTER if PortConfig is NULL
  */
 int32 CFE_PSP_GetEventPortConfig(uint8 PortNum, char *PortConfig, size_t ConfigSize);

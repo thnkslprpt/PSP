@@ -85,10 +85,10 @@ void Test_CFE_PSP_SendEventToPort(void)
 
     /* Test invalid port number */
     Status = CFE_PSP_SendEventToPort(4, "Invalid port");
-    UtAssert_INT32_EQ(Status, CFE_PSP_INVALID_ARGUMENT);
+    UtAssert_INT32_EQ(Status, CFE_PSP_ERROR);
     
     Status = CFE_PSP_SendEventToPort(255, "Invalid port");
-    UtAssert_INT32_EQ(Status, CFE_PSP_INVALID_ARGUMENT);
+    UtAssert_INT32_EQ(Status, CFE_PSP_ERROR);
 
     /* Test NULL message */
     Status = CFE_PSP_SendEventToPort(0, NULL);
@@ -115,7 +115,7 @@ void Test_CFE_PSP_GetEventPortConfig(void)
 
     /* Test invalid port */
     Status = CFE_PSP_GetEventPortConfig(4, ConfigBuf, sizeof(ConfigBuf));
-    UtAssert_INT32_EQ(Status, CFE_PSP_INVALID_ARGUMENT);
+    UtAssert_INT32_EQ(Status, CFE_PSP_ERROR);
 
     /* Test NULL buffer */
     Status = CFE_PSP_GetEventPortConfig(0, NULL, sizeof(ConfigBuf));
